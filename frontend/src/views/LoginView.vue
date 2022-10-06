@@ -69,3 +69,13 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    created(){
+        window.Echo.channel('test-event').listen('.HaloBro', data => {
+            console.log(data);
+        })
+    }
+}
+</script>
